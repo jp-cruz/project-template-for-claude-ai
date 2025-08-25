@@ -1,0 +1,32 @@
+name: Auto Backup
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for backup
+
+      - name: Create backup branch
+        run: |
+          DATE=$(date +%Y%m%d-%H%M%S)
+          git checkout -b backup-$DATE
+          git push origin backup-$DATE
+
+      - name: Archive repository
+        run: |
+          DATE=$(date +%Y%m%d-%H%M%S)
+          tar -czf backup-$DATE.tar.gz --exclude='.git' .
+          
+      - name: Upload backup artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: project-backup-${{ github.run_id }}
+          path: backup-*.tar.gz
+          retention-days: 30

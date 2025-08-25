@@ -1,0 +1,7 @@
+Contact: jpccruz@protonmail.com
+Expires: 2025-12-31T23:59:59.000Z
+Encryption: https://keyserver.ubuntu.com/pks/lookup?op=get&search=jpccruz@protonmail.com
+Preferred-Languages: en
+Canonical: https://github.com/[USERNAME]/[REPO]/.well-known/security.txt
+Policy: https://github.com/[USERNAME]/[REPO]/blob/main/docs/SECURITY.md
+Acknowledgments: https://github.com/[USERNAME]/[REPO]/blob/main/docs/ACKNOWLEDGMENTS.md

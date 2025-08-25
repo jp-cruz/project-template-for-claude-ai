@@ -1,0 +1,54 @@
+{
+  "name": "project-template-for-claude-ai",
+  "version": "0.1.0-alpha",
+  "description": "Comprehensive, secure project template optimized for Claude Code development",
+  "main": "index.js",
+  "scripts": {
+    "dev": "echo 'Replace with your development command'",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "clean": "rm -rf dist coverage",
+    "precommit": "./scripts/pre-commit.sh",
+    "security:audit": "./scripts/supply-chain-audit.sh",
+    "security:deps": "./scripts/dependency-check.sh",
+    "security:full": "npm run security:deps && npm run security:audit",
+    "sbom": "npx @cyclonedx/cyclonedx-npm --output-file sbom.json || echo 'SBOM generation requires @cyclonedx/cyclonedx-npm'"
+  },
+  "keywords": ["template", "claude-code", "automation", "ai-assisted", "security", "best-practices"],
+  "author": "Jp Cruz <jpccruz@protonmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpcruz/project-template-for-claude-ai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jpcruz/project-template-for-claude-ai/issues"
+  },
+  "homepage": "https://github.com/jpcruz/project-template-for-claude-ai#readme",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "babel-jest": "^29.5.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "jest": "^29.5.0",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}
