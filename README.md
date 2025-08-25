@@ -1,5 +1,9 @@
 # Project Template for Claude.ai v0.1a
 
+⚠️ **ALPHA SOFTWARE - NOT FOR PRODUCTION USE** ⚠️
+
+**This project is currently in alpha status and should NOT be used for production environments or critical applications. Please wait for version 1.0 and its validation before considering production use.**
+
 A comprehensive, secure project template optimized for Claude Code development with automated workflows, GitHub integration, and standardized tooling.
 
 ## 🚀 Quick Start
